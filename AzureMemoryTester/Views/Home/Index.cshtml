@@ -1,0 +1,38 @@
+﻿@model AzureMemoryTester.Models.HomeModel
+
+<html>
+<head></head>
+<body>
+    <form method="post">
+        <table>
+            <tr>
+                <td>Allocated manually</td>
+                <td>@(Model.Allocated / (1024 * 1024))</td>
+            </tr>
+            <tr>
+                <td>Process WS</td>
+                <td>@(Model.ProcessWS / (1024 * 1024))</td>
+            </tr>
+            <tr>
+                <td>Process PM</td>
+                <td>@(Model.ProcessPM / (1024 * 1024))</td>
+            </tr>
+            <tr>
+                <td>GC Mem</td>
+                <td>@(Model.GCMem / (1024 * 1024))</td>
+            </tr>
+            <tr>
+                <td>Env WS</td>
+                <td>@(Model.EnvWS / (1024 * 1024))</td>
+            </tr>
+            <tr>
+                <td>Is 64bit process</td>
+                <td>@Model.Is64Bit</td>
+            </tr>
+        </table>
+
+        <button type="submit">Inc</button>
+    </form>
+</body>
+
+</html>
